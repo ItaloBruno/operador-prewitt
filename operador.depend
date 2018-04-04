@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1522756754 source:c:\users\italo bruno\documents\operador\operador\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1522756754 
+
+1522850924 source:/home/italo/Área de Trabalho/operador/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
