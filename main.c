@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#define LINHAS 640
-#define COLUNAS 480
+#define LINHAS 246
+#define COLUNAS 300
 
 struct imagem
 {
@@ -12,18 +12,6 @@ struct imagem
 };  typedef struct imagem Imagem;
 
 Imagem imagem;
-
-//void iniciaMatriz()
-//{
-//    int i, j;
-//    for(i = 0; i < COLUNAS; i++)
-//    {
-//        for(j = 0; j < LINHAS; j++)
-//        {
-//            imagem.dados[i][j] = 0;
-//        }
-//    }
-//}
 
 void lerImagem(char *nome_arquivo)
 {
@@ -49,10 +37,7 @@ void lerImagem(char *nome_arquivo)
     }
 
     fscanf(arquivo_entrada,"%d %d", &imagem.num_linhas, &imagem.num_colunas);
-    //printf("\nLeitura \tLinha: %d, coluna: %d\n", imagem.num_linhas, imagem.num_colunas);
-    //scanf("%c");
     fscanf(arquivo_entrada, "%d", &imagem.valor_max);
-
 
     //Setando a matriz de dados com os valores de cada pixel
     for(i = 0; i < LINHAS; i++)
@@ -60,7 +45,6 @@ void lerImagem(char *nome_arquivo)
         for(j = 0; j < COLUNAS; j++)
         {
             fscanf(arquivo_entrada,"%d ", &imagem.dados[i][j]);
-//            printf("%d\n", imagem.dados[i][j]);
         }
     }
     fclose(arquivo_entrada);
@@ -68,33 +52,19 @@ void lerImagem(char *nome_arquivo)
 
 void criarImagem(char *nome_arquivo_resultado)
 {
-    int i, j, cont;
+    int i, j;
     FILE *arquivo_final;
     arquivo_final = fopen(nome_arquivo_resultado, "w");
-//    if(arquivo_final == NULL)
-//    {
-//        printf("Erro ao abrir o arquivo!!\n");
-//        exit(0);
-//    }
+
     fprintf(arquivo_final, "%s\n",      imagem.chave);
     fprintf(arquivo_final, "%d %d\n",   imagem.num_linhas, imagem.num_colunas);
     fprintf(arquivo_final, "%d\n",      imagem.valor_max);
 
-//    cont = 0;
-    for(i = 0; i < imagem.num_linhas; i++)
+    for(i = 0; i < LINHAS; i++)
     {
-        for(j = 0; j < imagem.num_colunas; j++)
+        for(j = 0; j < COLUNAS; j++)
         {
-            fprintf(arquivo_final, "%d\n", imagem.dados[i][j]);
-//            if(cont >= 16){
-//                fprintf(arquivo_final, "%3d\n", imagem.dados[i][j]);
-//                cont = 0;
-//
-//            }else{
-//                fprintf(arquivo_final, "%3d ", imagem.dados[i][j]);
-//                cont++;
-//            }
-//            printf("%d\n", imagem.dados[i][j]);
+            fprintf(arquivo_final, "%d ", imagem.dados[i][j]);
         }
     }
     fprintf(arquivo_final, "\n");
@@ -110,7 +80,6 @@ void operadorPrewitt()
     int gx[LINHAS][COLUNAS];
     int gy[LINHAS][COLUNAS];
     int g[LINHAS][COLUNAS];
-//    int mat[COLUNAS][LINHAS];
     int linha, coluna;
 
     // Setando a mascara X
@@ -159,42 +128,42 @@ void operadorPrewitt()
                                     ((mascara_y[2][1]) * (imagem.dados[linha+2][coluna+1])) +
                                     ((mascara_y[2][2]) * (imagem.dados[linha+2][coluna+2]));
 
-//            if(gx[linha][coluna] < 0)
-//            {
-//                gx[linha][coluna] = gx[linha][coluna] * (-1);
-//            }
-//            if(gy[linha][coluna] < 0)
-//            {
-//                gy[linha][coluna] = gy[linha][coluna] * (-1);
-//            }
+           if(gx[linha][coluna] < 0)
+           {
+               gx[linha][coluna] = gx[linha][coluna] * (-1);
+           }
+           if(gy[linha][coluna] < 0)
+           {
+               gy[linha][coluna] = gy[linha][coluna] * (-1);
+           }
 
-//            g[linha][coluna] = (gx[linha][coluna])  + (gy[linha][coluna]);
-//
-//            if (g[linha][coluna] < 0)
-//            {
-//                g[linha][coluna] = g[linha][coluna] * (-1);
-//            }
-//            if(g[linha][coluna] > 254)
-//            {
-//                imagem.dados[linha][coluna] = 255;
-//            }
-//            else
-//            {
-//                imagem.dados[linha][coluna] = 0;
-//            }
+           g[linha][coluna] = (gx[linha][coluna])  + (gy[linha][coluna]);
 
-            gx[linha][coluna] = pow(gx[linha][coluna], 2);
-            gy[linha][coluna] = pow(gy[linha][coluna], 2);
-            g[linha][coluna]  = gx[linha][coluna] + gy[linha][coluna];
-            g[linha][coluna]  = sqrt(g[linha][coluna]);
-            imagem.dados[linha][coluna] = g[linha][coluna];
+           if (g[linha][coluna] < 0)
+           {
+               g[linha][coluna] = g[linha][coluna] * (-1);
+           }
+           if(g[linha][coluna] > 254)
+           {
+               imagem.dados[linha][coluna] = 255;
+           }
+           else
+           {
+               imagem.dados[linha][coluna] = 0;
+           }
+
+            // gx[linha][coluna] = pow(gx[linha][coluna], 2);
+            // gy[linha][coluna] = pow(gy[linha][coluna], 2);
+            // g[linha][coluna]  = gx[linha][coluna] + gy[linha][coluna];
+            // g[linha][coluna]  = sqrt(g[linha][coluna]);
+            // imagem.dados[linha][coluna] = g[linha][coluna];
         }
     }
 }
 
 int main()
 {
-    char nome_arq_entrada[]  = "totem.ascii.pgm";
+    char nome_arq_entrada[]  = "coins.ascii.pgm";
     char nome_arq_result[]   = "resultado.ascii.pgm";
     lerImagem(nome_arq_entrada);
     operadorPrewitt(imagem);
