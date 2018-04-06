@@ -2,44 +2,52 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#define LINHAS 246
-#define COLUNAS 300
+#define NOME_MAX 512
+#define COLUNAS 512 //LARGURA DA IMAGEM
+#define LINHAS  512 //ALTURA DA IMAGEM
 
+//STRUCT COM TODAS AS INFORMAÇÕES NECESSÁRIAS PARA A MANIPULAÇÃO DA IMAGEM
 struct imagem
 {
-    int num_colunas, num_linhas, valor_max, dados[LINHAS][COLUNAS];
+    int  largura,
+         altura,
+         valor_max,
+         dados[LINHAS][COLUNAS];
     char chave[128];
+
 };  typedef struct imagem Imagem;
 
+//VARIÁVEIS QUE SERÃO USADAS NO ALGORITMO
 Imagem imagem;
+char nome_arquivo_entrada[NOME_MAX],
+     nome_arquivo_resultado[NOME_MAX] = "prewitt.";
+FILE *arquivo_entrada,
+     *arquivo_final;
 
-void lerImagem(char *nome_arquivo)
+// FAZ A LEITURA DO ARQUIVO DETERMINADO PELO USUÁRIO E SALVA SEUS DADOS NA VARIÁVEL IMAGEM
+void lerImagem()
 {
     int i, j;
-    //========================================================
-    // Carregando a imagem a ser usada no programa
-    FILE *arquivo_entrada;
-    arquivo_entrada = fopen(nome_arquivo,"r");
+    printf("Digite o nome do arquivo .pgm: ");
+    scanf("%s", nome_arquivo_entrada);
+    arquivo_entrada = fopen(nome_arquivo_entrada,"r");
     if(arquivo_entrada == NULL)
     {
         printf("Erro ao abrir o arquivo!!\n");
         exit(0);
     }
-
-    // Setando os atributos da Imagem na struct
+    // VERIFICA SE É UMA IMAGEM PGM OU NÃO
     fscanf(arquivo_entrada, "%s", imagem.chave);
-
     if(strcmp(imagem.chave, "P2") != 0)
     {
         printf("Arquivo nao e PGM\n");
         fclose(arquivo_entrada);
         exit(0);
     }
+    // SALVANDO OS DADOS DO CABEÇALHO DA IMAGEM
+    fscanf(arquivo_entrada,"%d %d %d", &imagem.largura, &imagem.altura, &imagem.valor_max);
 
-    fscanf(arquivo_entrada,"%d %d", &imagem.num_linhas, &imagem.num_colunas);
-    fscanf(arquivo_entrada, "%d", &imagem.valor_max);
-
-    //Setando a matriz de dados com os valores de cada pixel
+    // PREENCHENDO A MATRIZ DE DADOS COM OS VALORES DE CADA PIXEL DA IMAGEM
     for(i = 0; i < LINHAS; i++)
     {
         for(j = 0; j < COLUNAS; j++)
@@ -48,18 +56,21 @@ void lerImagem(char *nome_arquivo)
         }
     }
     fclose(arquivo_entrada);
+    return;
 }
 
-void criarImagem(char *nome_arquivo_resultado)
+// FUNÇÃO QUE CRIA UMA NOVA IMAGEM APÓS A APLICAÇÃO DO PREWITT
+void criarImagem()
 {
     int i, j;
-    FILE *arquivo_final;
+    strcat(nome_arquivo_resultado, nome_arquivo_entrada);
+    printf("NOME DO ARQUIVO RESULTADO: %s", nome_arquivo_resultado);
+
+    // ESCRITA DOS DADOS DA NOVA IMAGEM
     arquivo_final = fopen(nome_arquivo_resultado, "w");
-
-    fprintf(arquivo_final, "%s\n",      imagem.chave);
-    fprintf(arquivo_final, "%d %d\n",   imagem.num_linhas, imagem.num_colunas);
-    fprintf(arquivo_final, "%d\n",      imagem.valor_max);
-
+    fprintf(arquivo_final, "%s\n",    imagem.chave);
+    fprintf(arquivo_final, "%d %d\n", imagem.largura, imagem.altura);
+    fprintf(arquivo_final, "%d\n",    imagem.altura);
     for(i = 0; i < LINHAS; i++)
     {
         for(j = 0; j < COLUNAS; j++)
@@ -74,41 +85,22 @@ void criarImagem(char *nome_arquivo_resultado)
 
 void operadorPrewitt()
 {
-    // Mascaras de Prewitt
-    int mascara_x[3][3];
-    int mascara_y[3][3];
-    int gx[LINHAS][COLUNAS];
-    int gy[LINHAS][COLUNAS];
-    int g[LINHAS][COLUNAS];
+    // MASCARAS DE PREWITT
+    int mascara_x[3][3] = {{1, 0, -1},{1, 0, -1},{1, 0, -1}};
+    int mascara_y[3][3] = {{-1, -1, -1},{0, 0, 0},{1, 1, 1}};
+    int resultado_mascara_x = 0;
+    int resultado_mascara_y = 0;
+    int resultado_final     = 0;
     int linha, coluna;
 
-    // Setando a mascara X
-    mascara_x[0][0] =  1;
-    mascara_x[0][1] =  0;
-    mascara_x[0][2] = -1;
-    mascara_x[1][0] =  1;
-    mascara_x[1][1] =  0;
-    mascara_x[1][2] = -1;
-    mascara_x[2][0] =  1;
-    mascara_x[2][1] =  0;
-    mascara_x[2][2] = -1;
-
-    // Setando a mascara Y
-    mascara_y[0][0] = -1;
-    mascara_y[0][1] = -1;
-    mascara_y[0][2] = -1;
-    mascara_y[1][0] =  0;
-    mascara_y[1][1] =  0;
-    mascara_y[1][2] =  0;
-    mascara_y[2][0] =  1;
-    mascara_y[2][1] =  1;
-    mascara_y[2][2] =  1;
-
+    // PERCORRE CADA PIXEL DA IMAGEM E APLICA AS MASCARAS X E Y NELE E EM SUA VIZINHANÇA
+    // APÓS ISSO, O RESULTADO DE AMBAS AS OPERAÇÕES SÃO ELEVADAS AO QUADRADO E SOMADAS
+    // POR FIM, É FEITA A RAIZ QUADRADA DESSA SOMA E ATRIBUÍDA AO PIXEL EM QUE ESTAMOS NO MOMENTO.
     for(linha = 0; linha < LINHAS; linha++)
     {
         for(coluna = 0; coluna < COLUNAS; coluna++)
         {
-            gx[linha][coluna]   =   ((mascara_x[0][0]) * (imagem.dados[linha][coluna])) +
+            resultado_mascara_x   = ((mascara_x[0][0]) * (imagem.dados[linha][coluna])) +
                                     ((mascara_x[0][1]) * (imagem.dados[linha][coluna+1])) +
                                     ((mascara_x[0][2]) * (imagem.dados[linha][coluna+2])) +
                                     ((mascara_x[1][0]) * (imagem.dados[linha+1][coluna])) +
@@ -118,7 +110,7 @@ void operadorPrewitt()
                                     ((mascara_x[2][1]) * (imagem.dados[linha+2][coluna+1])) +
                                     ((mascara_x[2][2]) * (imagem.dados[linha+2][coluna+2]));
 
-            gy[linha][coluna] =   ((mascara_y[0][0]) * (imagem.dados[linha][coluna])) +
+            resultado_mascara_y =   ((mascara_y[0][0]) * (imagem.dados[linha][coluna])) +
                                     ((mascara_y[0][1]) * (imagem.dados[linha][coluna+1])) +
                                     ((mascara_y[0][2]) * (imagem.dados[linha][coluna+3])) +
                                     ((mascara_y[1][0]) * (imagem.dados[linha+1][coluna])) +
@@ -128,50 +120,23 @@ void operadorPrewitt()
                                     ((mascara_y[2][1]) * (imagem.dados[linha+2][coluna+1])) +
                                     ((mascara_y[2][2]) * (imagem.dados[linha+2][coluna+2]));
 
-           if(gx[linha][coluna] < 0)
-           {
-               gx[linha][coluna] = gx[linha][coluna] * (-1);
-           }
-           if(gy[linha][coluna] < 0)
-           {
-               gy[linha][coluna] = gy[linha][coluna] * (-1);
-           }
-
-           g[linha][coluna] = (gx[linha][coluna])  + (gy[linha][coluna]);
-
-           if (g[linha][coluna] < 0)
-           {
-               g[linha][coluna] = g[linha][coluna] * (-1);
-           }
-           if(g[linha][coluna] > 254)
-           {
-               imagem.dados[linha][coluna] = 255;
-           }
-           else
-           {
-               imagem.dados[linha][coluna] = 0;
-           }
-
-            // gx[linha][coluna] = pow(gx[linha][coluna], 2);
-            // gy[linha][coluna] = pow(gy[linha][coluna], 2);
-            // g[linha][coluna]  = gx[linha][coluna] + gy[linha][coluna];
-            // g[linha][coluna]  = sqrt(g[linha][coluna]);
-            // imagem.dados[linha][coluna] = g[linha][coluna];
+             resultado_mascara_x *= resultado_mascara_x;
+             resultado_mascara_y *= resultado_mascara_y;
+             resultado_final  = resultado_mascara_x + resultado_mascara_y;
+             resultado_final  = sqrt(resultado_final);
+             imagem.dados[linha][coluna] = resultado_final;
         }
     }
+    return;
 }
 
 int main()
 {
-    char nome_arq_entrada[]  = "coins.ascii.pgm";
-    char nome_arq_result[]   = "resultado.ascii.pgm";
-    lerImagem(nome_arq_entrada);
-    operadorPrewitt(imagem);
-    criarImagem(nome_arq_result);
+    lerImagem();
+
+    operadorPrewitt();
+
+    criarImagem();
+
     return 0;
 }
-
-
-
-
-
