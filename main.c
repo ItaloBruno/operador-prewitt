@@ -3,31 +3,32 @@
 #include <string.h>
 #include <math.h>
 #define NOME_MAX 512
-#define COLUNAS 512 //LARGURA DA IMAGEM
-#define LINHAS  512 //ALTURA DA IMAGEM
+#define COLUNAS 640 //LARGURA DA IMAGEM
+#define LINHAS  480 //ALTURA DA IMAGEM
 
 //STRUCT COM TODAS AS INFORMAÇÕES NECESSÁRIAS PARA A MANIPULAÇÃO DA IMAGEM
 struct imagem
 {
-    int  largura,
-         altura,
-         valor_max,
-         dados[LINHAS][COLUNAS];
+    int  largura;
+    int  altura;
+    int  valor_max;
+    int  dados[LINHAS][COLUNAS];
     char chave[128];
 
 };  typedef struct imagem Imagem;
 
 //VARIÁVEIS QUE SERÃO USADAS NO ALGORITMO
 Imagem imagem;
-char nome_arquivo_entrada[NOME_MAX],
-     nome_arquivo_resultado[NOME_MAX] = "prewitt.";
-FILE *arquivo_entrada,
-     *arquivo_final;
+char nome_arquivo_entrada[NOME_MAX];
+char nome_arquivo_resultado[NOME_MAX] = "prewitt.";
+FILE *arquivo_entrada;
+FILE *arquivo_final;
+int i, j;
+
 
 // FAZ A LEITURA DO ARQUIVO DETERMINADO PELO USUÁRIO E SALVA SEUS DADOS NA VARIÁVEL IMAGEM
 void lerImagem()
 {
-    int i, j;
     printf("Digite o nome do arquivo .pgm: ");
     scanf("%s", nome_arquivo_entrada);
     arquivo_entrada = fopen(nome_arquivo_entrada,"r");
@@ -62,7 +63,6 @@ void lerImagem()
 // FUNÇÃO QUE CRIA UMA NOVA IMAGEM APÓS A APLICAÇÃO DO PREWITT
 void criarImagem()
 {
-    int i, j;
     strcat(nome_arquivo_resultado, nome_arquivo_entrada);
     printf("NOME DO ARQUIVO RESULTADO: %s", nome_arquivo_resultado);
 
@@ -75,7 +75,7 @@ void criarImagem()
     {
         for(j = 0; j < COLUNAS; j++)
         {
-            fprintf(arquivo_final, "%d ", imagem.dados[i][j]);
+            fprintf(arquivo_final, "%3d ", imagem.dados[i][j]);
         }
     }
     fprintf(arquivo_final, "\n");
@@ -91,9 +91,9 @@ void operadorPrewitt()
     int resultado_mascara_x = 0;
     int resultado_mascara_y = 0;
     int resultado_final     = 0;
-    int linha, coluna;
-
-    // PERCORRE CADA PIXEL DA IMAGEM E APLICA AS MASCARAS X E Y NELE E EM SUA VIZINHANÇA
+    int linha   = 0;
+    int coluna  = 0;
+    // PERCORRE CADA PIXEL DA IMAGEM E APLICA AS MASCARAS X E Y NELE E EM SUA VIZINHANÇA.
     // APÓS ISSO, O RESULTADO DE AMBAS AS OPERAÇÕES SÃO ELEVADAS AO QUADRADO E SOMADAS
     // POR FIM, É FEITA A RAIZ QUADRADA DESSA SOMA E ATRIBUÍDA AO PIXEL EM QUE ESTAMOS NO MOMENTO.
     for(linha = 0; linha < LINHAS; linha++)
@@ -112,7 +112,7 @@ void operadorPrewitt()
 
             resultado_mascara_y =   ((mascara_y[0][0]) * (imagem.dados[linha][coluna])) +
                                     ((mascara_y[0][1]) * (imagem.dados[linha][coluna+1])) +
-                                    ((mascara_y[0][2]) * (imagem.dados[linha][coluna+3])) +
+                                    ((mascara_y[0][2]) * (imagem.dados[linha][coluna+2])) +
                                     ((mascara_y[1][0]) * (imagem.dados[linha+1][coluna])) +
                                     ((mascara_y[1][1]) * (imagem.dados[linha+1][coluna+1])) +
                                     ((mascara_y[1][2]) * (imagem.dados[linha+1][coluna+2])) +
@@ -120,11 +120,24 @@ void operadorPrewitt()
                                     ((mascara_y[2][1]) * (imagem.dados[linha+2][coluna+1])) +
                                     ((mascara_y[2][2]) * (imagem.dados[linha+2][coluna+2]));
 
-             resultado_mascara_x *= resultado_mascara_x;
-             resultado_mascara_y *= resultado_mascara_y;
+             resultado_mascara_x = resultado_mascara_x * resultado_mascara_x;
+             resultado_mascara_y = resultado_mascara_y * resultado_mascara_y;
              resultado_final  = resultado_mascara_x + resultado_mascara_y;
              resultado_final  = sqrt(resultado_final);
-             imagem.dados[linha][coluna] = resultado_final;
+             if(resultado_final > 255)
+             {
+                imagem.dados[linha][coluna] = 255;
+             }
+             else if(resultado_final < 0)
+             {
+                imagem.dados[linha][coluna] = 0;
+             }
+             else
+             {
+                imagem.dados[linha][coluna] = resultado_final;
+             }
+//            printf("%d\n", resultado_final);
+
         }
     }
     return;
