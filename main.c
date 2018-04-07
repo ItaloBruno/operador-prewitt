@@ -4,7 +4,7 @@
 #include <math.h>
 #define NOME_MAX 512
 #define COLUNAS 640 //LARGURA DA IMAGEM
-#define LINHAS  480 //ALTURA DA IMAGEM
+#define LINHAS 480 //ALTURA DA IMAGEM
 
 //STRUCT COM TODAS AS INFORMAÇÕES NECESSÁRIAS PARA A MANIPULAÇÃO DA IMAGEM
 struct imagem
@@ -23,9 +23,20 @@ char nome_arquivo_entrada[NOME_MAX];
 char nome_arquivo_resultado[NOME_MAX] = "prewitt.";
 FILE *arquivo_entrada;
 FILE *arquivo_final;
-int i, j;
+int i;
+int j;
+int contador;
 
-
+//void inicializaMztriz()
+//{
+//    for(i = 0; i < LINHAS; i++)
+//    {
+//        for(j = 0; j < COLUNAS; j++)
+//        {
+//            imagem.dados[i][j] = 0;
+//        }
+//    }
+//}
 // FAZ A LEITURA DO ARQUIVO DETERMINADO PELO USUÁRIO E SALVA SEUS DADOS NA VARIÁVEL IMAGEM
 void lerImagem()
 {
@@ -70,12 +81,19 @@ void criarImagem()
     arquivo_final = fopen(nome_arquivo_resultado, "w");
     fprintf(arquivo_final, "%s\n",    imagem.chave);
     fprintf(arquivo_final, "%d %d\n", imagem.largura, imagem.altura);
-    fprintf(arquivo_final, "%d\n",    imagem.altura);
+    fprintf(arquivo_final, "%d\n",    imagem.valor_max);
     for(i = 0; i < LINHAS; i++)
     {
         for(j = 0; j < COLUNAS; j++)
         {
             fprintf(arquivo_final, "%3d ", imagem.dados[i][j]);
+            if(contador >= 16)
+            {
+                fprintf(arquivo_final, "\n", imagem.dados[i][j]);
+                contador = 0;
+            }
+            else
+                contador++;
         }
     }
     fprintf(arquivo_final, "\n");
@@ -136,7 +154,7 @@ void operadorPrewitt()
              {
                 imagem.dados[linha][coluna] = resultado_final;
              }
-//            printf("%d\n", resultado_final);
+////            printf("%d\n", resultado_final);
 
         }
     }
@@ -145,9 +163,11 @@ void operadorPrewitt()
 
 int main()
 {
+//    inicializaMztriz();
+
     lerImagem();
 
-    operadorPrewitt();
+//    operadorPrewitt();
 
     criarImagem();
 

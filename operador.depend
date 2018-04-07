@@ -3,7 +3,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1522756754 
+1522979441 
 
 1522850924 source:/home/italo/Área de Trabalho/operador/main.c
 	<stdio.h>
@@ -23,6 +23,12 @@
 	<math.h>
 
 1522979441 source:c:\users\italo bruno\desktop\operador-prewitt\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+
+1523110790 source:/home/italo/Documentos/operador-prewitt/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
