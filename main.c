@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
+//#include <math.h>
 #define NOME_MAX 512
-#define COLUNAS 24 //LARGURA DA IMAGEM
-#define LINHAS  7  //ALTURA DA IMAGEM
+#define COLUNAS 128 //LARGURA DA IMAGEM
+#define LINHAS  128 //ALTURA DA IMAGEM
 
 //STRUCT COM TODAS AS INFORMAÇÕES NECESSÁRIAS PARA A MANIPULAÇÃO DA IMAGEM
 struct imagem_entrada
@@ -142,8 +142,6 @@ void operadorPrewitt()
 //            resultado_mascara_y *= resultado_mascara_y;
 //            resultado_final = resultado_mascara_x + resultado_mascara_y;
 //            resultado_final = sqrt(resultado_final);
-//            if(resultado_final > imagem_resultado.valor_max)
-//                resultado_final = imagem_resultado.valor_max;
 //            imagem_resultado.dados[linha][coluna] = resultado_final;
             if(resultado_mascara_x < 0)
                 resultado_mascara_x = resultado_mascara_x * (-1);
