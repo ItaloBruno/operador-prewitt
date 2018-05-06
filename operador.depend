@@ -28,9 +28,9 @@
 	<string.h>
 	<math.h>
 
-1523238996 source:/home/italo/Documentos/operador-prewitt/main.c
+1525456983 source:/home/italo/Documentos/operador-prewitt/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
-	<math.h>
+	<time.h>
 

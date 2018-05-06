@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include <math.h>
-#define NOME_MAX 512
+#include <time.h>
+#define NOME_MAX 128
 #define COLUNAS 128 //LARGURA DA IMAGEM
 #define LINHAS  128 //ALTURA DA IMAGEM
 
@@ -21,7 +21,7 @@ struct imagem_entrada
 Imagem imagem_entrada;
 Imagem imagem_resultado;
 char nome_arquivo_entrada[NOME_MAX];
-char nome_arquivo_resultado[NOME_MAX] = "prewitt.";
+char nome_arquivo_resultado[NOME_MAX] = "prewitt-";
 FILE *arquivo_entrada;
 FILE *arquivo_final;
 int i;
@@ -86,7 +86,7 @@ void criarImagem()
             fprintf(arquivo_final, "%3d ", imagem_resultado.dados[i][j]);
             if(contador >= 16)
             {
-                fprintf(arquivo_final, "\n", imagem_resultado.dados[i][j]);
+                fprintf(arquivo_final, "\n");
                 contador = 0;
             }
             else
@@ -138,11 +138,6 @@ void operadorPrewitt()
                                     ((mascara_y[2][1]) * (imagem_entrada.dados[linha+2][coluna+1])) +
                                     ((mascara_y[2][2]) * (imagem_entrada.dados[linha+2][coluna+2]));
 
-//            resultado_mascara_x *= resultado_mascara_x;
-//            resultado_mascara_y *= resultado_mascara_y;
-//            resultado_final = resultado_mascara_x + resultado_mascara_y;
-//            resultado_final = sqrt(resultado_final);
-//            imagem_resultado.dados[linha][coluna] = resultado_final;
             if(resultado_mascara_x < 0)
                 resultado_mascara_x = resultado_mascara_x * (-1);
             if(resultado_mascara_y < 0)
@@ -156,10 +151,20 @@ void operadorPrewitt()
 
 int main()
 {
-
     lerImagem();
 
+    //==============================
+    clock_t tempo_inicio;
+    clock_t tempo_fim;
+    double tempo_gasto;
+    tempo_inicio = clock();
+
     operadorPrewitt();
+
+    tempo_fim    = clock();
+    tempo_gasto  = ((tempo_fim - tempo_inicio) / (CLOCKS_PER_SEC/1000.0));
+    printf("\nTempo gasto: %.8f \n\n", tempo_gasto);
+    //==============================
 
     criarImagem();
 
