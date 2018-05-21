@@ -6,7 +6,7 @@
 #define COLUNAS 128 //LARGURA DA IMAGEM
 #define LINHAS  128 //ALTURA DA IMAGEM
 
-//STRUCT COM TODAS AS INFORMA«’ES NECESS¡RIAS PARA A MANIPULA«√O DA IMAGEM
+//STRUCT COM TODAS AS INFORMA√á√ïES NECESS√ÅRIAS PARA A MANIPULA√á√ÉO DA IMAGEM
 struct imagem_entrada
 {
     int  largura;
@@ -17,7 +17,7 @@ struct imagem_entrada
 
 };  typedef struct imagem_entrada Imagem;
 
-//VARI¡VEIS QUE SER√O USADAS NO ALGORITMO
+//VARI√ÅVEIS QUE SER√ÉO USADAS NO ALGORITMO
 Imagem imagem_entrada;
 Imagem imagem_resultado;
 char nome_arquivo_entrada[NOME_MAX];
@@ -28,7 +28,7 @@ int i;
 int j;
 int contador;
 
-// FAZ A LEITURA DO ARQUIVO DETERMINADO PELO USU¡RIO E SALVA SEUS DADOS NA VARI¡VEL IMAGEM
+// FAZ A LEITURA DO ARQUIVO DETERMINADO PELO USU√ÅRIO E SALVA SEUS DADOS NA VARI√ÅVEL IMAGEM
 void lerImagem()
 {
     printf("Digite o nome do arquivo .pgm: ");
@@ -39,7 +39,7 @@ void lerImagem()
         printf("Erro ao abrir o arquivo!!\n");
         exit(0);
     }
-    // VERIFICA SE … UMA IMAGEM PGM OU N√O
+    // VERIFICA SE √â UMA IMAGEM PGM OU N√ÉO
     fscanf(arquivo_entrada, "%s", imagem_entrada.chave);
     if(strcmp(imagem_entrada.chave, "P2") != 0)
     {
@@ -47,10 +47,10 @@ void lerImagem()
         fclose(arquivo_entrada);
         exit(0);
     }
-    // SALVANDO OS DADOS DO CABE«ALHO DA IMAGEM
+    // SALVANDO OS DADOS DO CABE√áALHO DA IMAGEM
     fscanf(arquivo_entrada,"%d %d %d", &imagem_entrada.largura, &imagem_entrada.altura, &imagem_entrada.valor_max);
 
-    // ATRIBUINDO OS DADOS DE CABE«ALHO PARA A IMAGEM RESULTADO
+    // ATRIBUINDO OS DADOS DE CABE√áALHO PARA A IMAGEM RESULTADO
     strcpy(imagem_resultado.chave, imagem_entrada.chave);
     imagem_resultado.largura    = imagem_entrada.largura;
     imagem_resultado.altura     = imagem_entrada.altura;
@@ -68,7 +68,7 @@ void lerImagem()
     return;
 }
 
-// FUN«√O QUE CRIA UMA NOVA IMAGEM AP”S A APLICA«√O DO PREWITT
+// FUN√á√ÉO QUE CRIA UMA NOVA IMAGEM AP√ìS A APLICA√á√ÉO DO PREWITT
 void criarImagem()
 {
     strcat(nome_arquivo_resultado, nome_arquivo_entrada);
@@ -79,7 +79,7 @@ void criarImagem()
     fprintf(arquivo_final, "%s\n",    imagem_resultado.chave);
     fprintf(arquivo_final, "%d %d\n", imagem_resultado.largura, imagem_resultado.altura);
     fprintf(arquivo_final, "%d\n",    imagem_resultado.valor_max);
-    for(i = 0; i < LINHAS; i++)
+    for(i = 0; i < LINHAS-5; i++)
     {
         for(j = 0; j < COLUNAS; j++)
         {
@@ -109,10 +109,10 @@ void operadorPrewitt()
     int linha   = 0;
     int coluna  = 0;
 
-//    1∞ PASSO - PERCORRER CADA PIXEL DA IMAGEM E APLICAR AS MASCARAS X E Y NO PIXEL EM QUE VOC  EST¡ E EM SUA VIZINHAN«A
-//    2∞ PASSO - CALCULAR O M”DULO DE AMBOS OS RESULTADOS
-//    3∞ PASSO - SOMAR OS RESULTADOS DA OPERA«√O ANTERIOR
-//    4∞ PASSO - ARIBUIR O RESULTADO FINAL AO PIXEL NA IMAGEM RESULTANTE
+//    1¬∞ PASSO - PERCORRER CADA PIXEL DA IMAGEM E APLICAR AS MASCARAS X E Y NO PIXEL EM QUE VOC√ä EST√Å E EM SUA VIZINHAN√áA
+//    2¬∞ PASSO - CALCULAR O M√ìDULO DE AMBOS OS RESULTADOS
+//    3¬∞ PASSO - SOMAR OS RESULTADOS DA OPERA√á√ÉO ANTERIOR
+//    4¬∞ PASSO - ARIBUIR O RESULTADO FINAL AO PIXEL NA IMAGEM RESULTANTE
 
     for(linha = 0; linha < LINHAS; linha++)
     {
