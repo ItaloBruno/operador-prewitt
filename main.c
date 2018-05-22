@@ -28,6 +28,7 @@ int i;
 int j;
 int contador;
 
+
 // FAZ A LEITURA DO ARQUIVO DETERMINADO PELO USUÁRIO E SALVA SEUS DADOS NA VARIÁVEL IMAGEM
 void lerImagem()
 {
@@ -79,10 +80,12 @@ void criarImagem()
     fprintf(arquivo_final, "%s\n",    imagem_resultado.chave);
     fprintf(arquivo_final, "%d %d\n", imagem_resultado.largura, imagem_resultado.altura);
     fprintf(arquivo_final, "%d\n",    imagem_resultado.valor_max);
-    for(i = 0; i < LINHAS-5; i++)
+    for(i = 0; i < LINHAS; i++)
     {
         for(j = 0; j < COLUNAS; j++)
         {
+            if(imagem_resultado.dados[i][j] < 0)
+                imagem_resultado.dados[i][j] = imagem_resultado.dados[i][j] * (-1);
             fprintf(arquivo_final, "%3d ", imagem_resultado.dados[i][j]);
             if(contador >= 16)
             {
@@ -143,6 +146,8 @@ void operadorPrewitt()
             if(resultado_mascara_y < 0)
                 resultado_mascara_y = resultado_mascara_y * (-1);
             resultado_final  = resultado_mascara_x + resultado_mascara_y;
+            if(resultado_final < 0)
+                resultado_final = resultado_final * (-1);
             imagem_resultado.dados[linha][coluna] = resultado_final;
         }
     }
