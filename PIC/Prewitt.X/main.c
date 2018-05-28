@@ -5,15 +5,18 @@
  * Created on 23 de Maio de 2018, 16:25
  */
 
+// ImportaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 #include <p18f4550.h>
 #include <usart.h>
 #include <delays.h>
 
+// DefiniÃ§Ã£o das dimensÃµes da imagem usada no programa
 #define COLUNAS 80 //LARGURA DA IMAGEM
 #define LINHAS  50 //ALTURA DA IMAGEM
 
+// ConfiguraÃ§Ãµes do PIC18F4550
 #pragma config FOSC     = HS    /// EXTERN CLOCK 8MHZ
 #pragma config IESO     = OFF   /// INTERNAL/EXTERNAL OSCILATOR DISABLE
 #pragma config PWRT     = OFF   /// DISABLE POWER-UP TIMER
@@ -26,8 +29,8 @@
 #pragma config STVREN   = ON    /// STACK FULL/UNDERFLOW CAUSE RESET
 #pragma config LVP      = OFF   /// DISABLE LOW VOLTAGE PROGRAM (ICSP DISABLE)
 
-//vetor de imagem 80 x 50
-rom int data[LINHAS][COLUNAS] = 
+// vetor de imagem 80 x 50
+rom int dados[LINHAS][COLUNAS] = 
 {
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -81,16 +84,16 @@ rom int data[LINHAS][COLUNAS] =
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
 };
 
-
+// ConfiguraÃ§Ãµes necessÃ¡rias para que a USART funcione corretamente
 void configurarUSART(){
 	OpenUSART(USART_TX_INT_OFF &  // Transmit Interrupt OFF OBS: Tem no datasheet -> mudei para ON
-            USART_RX_INT_ON & // Receive Interrupt ON OBS: Tem no datasheet -> mudei para ON
-            USART_ASYNCH_MODE & // Asynchronous Mode OBS: Tem no datasheet
-            USART_EIGHT_BIT & // 8-bit Transmit/Receive OBS: Tem no datasheet
-            USART_CONT_RX & // Continuous Reception OBS: Pesquisar para qu? serve. Deve ter no datasheet
+            USART_RX_INT_ON &     // Receive Interrupt ON OBS: Tem no datasheet -> mudei para ON
+            USART_ASYNCH_MODE &   // Asynchronous Mode OBS: Tem no datasheet
+            USART_EIGHT_BIT &     // 8-bit Transmit/Receive OBS: Tem no datasheet
+            USART_CONT_RX &       // Continuous Reception OBS: Pesquisar para qu? serve. Deve ter no datasheet
 			  		USART_SYNC_SLAVE &
-            USART_BRGH_HIGH, // High Baud Rate
-    		  	51); // Baud Rate 9600 OBS: Formula no livro
+            USART_BRGH_HIGH,      // High Baud Rate
+    		  	51);              // Baud Rate 9600 OBS: Formula no livro
 						baudUSART(BAUD_8_BIT_RATE &
 			  		BAUD_AUTO_OFF &
 		      	BAUD_WAKEUP_OFF);
@@ -99,20 +102,19 @@ void configurarUSART(){
 	BAUDCONbits.TXCKP = 0; //Inversao
 }
    
-
-void send_Serial(int soma)
+// FunÃ§Ã£o que faz reccebe o valor final da operaÃ§Ã£o de prewitt, converte para caracteres e envia pela UART
+void enviarSerial(int valor)
 {
-    int i, centena, dezena, unidade, n, aux;
-    n = soma;
+    int centena, dezena, unidade, aux;
     
-    if(soma > 100)
+    if(soma >= 100)
     {
-        centena=n/100;
+        centena = valor/100;
         centena = centena + 48;
-        aux = n%100;
-        dezena = aux/10;
-        dezena = dezena + 48;
-        aux = n%100;
+        aux     = valor%100;
+        dezena  = aux/10;
+        dezena  = dezena + 48;
+        aux     = valor%100;
         unidade = aux%10;
         unidade = unidade + 48;
         Delay100TCYx(100);
@@ -121,14 +123,13 @@ void send_Serial(int soma)
         putcUSART(dezena);
         Delay100TCYx(100);
         putcUSART(unidade);
-        putcUSART(32);
-        
+        putcUSART(32);    
     }
     else
     {
-        dezena = n/10;
-        dezena = dezena + 48;
-        aux = n%10;
+        dezena  = valor/10;
+        dezena  = dezena + 48;
+        aux     = valor%10;
         unidade = aux + 48;
         Delay100TCYx(100);
         putcUSART(dezena);
@@ -146,10 +147,8 @@ void operadorPrewitt()
     int resultado_mascara_x = 0;
     int resultado_mascara_y = 0;
     int resultado_final     = 0;
-    int linha   = 0;
-    int coluna  = 0;
-    int i, j;
-    // Matriz 3x3 que pegará os pixels ao redor do qual estamos operando
+    int i, j, linha, coluna;
+    // Matriz 3x3 que pegarï¿½ os pixels ao redor do qual estamos operando
     int matriz[3][3];
     
     for(linha = 0; linha < LINHAS; linha++)
@@ -157,7 +156,7 @@ void operadorPrewitt()
         for(coluna = 0; coluna < COLUNAS; coluna++)
         {
             /*
-             * Matriz 3x3 que pegará os pixels ao redor do qual estamos operando
+             * Matriz 3x3 que pegarï¿½ os pixels ao redor do qual estamos operando
              * |---|---|---|
              * | 1 | 2 | 3 |
              * |---|---|---|
@@ -166,15 +165,15 @@ void operadorPrewitt()
              * | 7 | 8 | 9 |
              * |---|---|---|
              */
-            matriz[0][0] = data[linha - 1][coluna - 1]; //posição 1
-            matriz[0][1] = data[linha - 1][coluna];     //posição 2
-            matriz[0][2] = data[linha - 1][coluna + 1]; //posição 3
-            matriz[1][0] = data[linha][coluna - 1];     //posição 4
-            matriz[1][1] = data[linha][coluna];         //posição 5 Posição do pixel que irá receber o resultado da operação
-            matriz[1][2] = data[linha][coluna + 1];     //posição 6
-            matriz[2][0] = data[linha + 1][coluna - 1]; //posição 7
-            matriz[2][1] = data[linha + 1][coluna];     //posição 8
-            matriz[2][2] = data[linha + 1][coluna + 1]; //posição 9
+            matriz[0][0] = dados[linha - 1][coluna - 1]; //posiï¿½ï¿½o 1
+            matriz[0][1] = dados[linha - 1][coluna];     //posiï¿½ï¿½o 2
+            matriz[0][2] = dados[linha - 1][coluna + 1]; //posiï¿½ï¿½o 3
+            matriz[1][0] = dados[linha][coluna - 1];     //posiï¿½ï¿½o 4
+            matriz[1][1] = dados[linha][coluna];         //posiï¿½ï¿½o 5 Posiï¿½ï¿½o do pixel que irï¿½ receber o resultado da operaï¿½ï¿½o
+            matriz[1][2] = dados[linha][coluna + 1];     //posiï¿½ï¿½o 6
+            matriz[2][0] = dados[linha + 1][coluna - 1]; //posiï¿½ï¿½o 7
+            matriz[2][1] = dados[linha + 1][coluna];     //posiï¿½ï¿½o 8
+            matriz[2][2] = dados[linha + 1][coluna + 1]; //posiï¿½ï¿½o 9
             for(i = 0; i < 3; i++)
             {
                 for(j = 0; j < 3; j++)
@@ -212,7 +211,7 @@ void operadorPrewitt()
             if(resultado_mascara_y < 0)
                 resultado_mascara_y = resultado_mascara_y * (-1);
             resultado_final  = resultado_mascara_x + resultado_mascara_y;
-            send_Serial(resultado_final);
+            enviarSerial(resultado_final);
         }
         putrsUSART("\r\n");
     }
