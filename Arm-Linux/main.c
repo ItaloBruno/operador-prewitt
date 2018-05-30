@@ -186,16 +186,16 @@ int main()
     lerImagem();
 
     //==============================
-    clock_t tempo_inicio;
-    clock_t tempo_fim;
-    double tempo_gasto;
-    tempo_inicio = clock();
-
+//    clock_t tempo_inicio;
+//    clock_t tempo_fim;
+//    double tempo_gasto;
+//    tempo_inicio = clock();
+//
     operadorPrewitt();
-
-    tempo_fim    = clock();
-    tempo_gasto  = ((tempo_fim - tempo_inicio) / (CLOCKS_PER_SEC/1000.0));
-    printf("\nTempo gasto: %.8f \n\n", tempo_gasto);
+//
+//    tempo_fim    = clock();
+//    tempo_gasto  = ((tempo_fim - tempo_inicio) / (CLOCKS_PER_SEC/1000.0));
+//    printf("\nTempo gasto: %.8f \n\n", tempo_gasto);
     //==============================
 
     criarImagem();
