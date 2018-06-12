@@ -3,8 +3,8 @@
 #include <string.h>
 #include <time.h>
 #define NOME_MAX 128
-#define COLUNAS 128 //LARGURA DA IMAGEM
-#define LINHAS  128 //ALTURA DA IMAGEM
+#define COLUNAS  602 //LARGURA DA IMAGEM + 2
+#define LINHAS   602 //ALTURA  DA IMAGEM + 2
 
 //STRUCT COM TODAS AS INFORMAÇÕES NECESSÁRIAS PARA A MANIPULAÇÃO DA IMAGEM
 struct imagem_entrada
@@ -13,7 +13,7 @@ struct imagem_entrada
     int  altura;
     int  valor_max;
     int  dados[LINHAS][COLUNAS];
-    char chave[128];
+    char chave[NOME_MAX];
 
 };  typedef struct imagem_entrada Imagem;
 
@@ -62,7 +62,14 @@ void lerImagem()
     {
         for(j = 0; j < COLUNAS; j++)
         {
-            fscanf(arquivo_entrada,"%d ", &imagem_entrada.dados[i][j]);
+            if(i == 0 || j == 0 || i == LINHAS -1 || j == COLUNAS -1)
+            {
+                imagem_entrada.dados[i][j] = 0;
+            }
+            else
+            {
+                fscanf(arquivo_entrada,"%d ", &imagem_entrada.dados[i][j]);
+            }
         }
     }
     fclose(arquivo_entrada);
@@ -73,19 +80,17 @@ void lerImagem()
 void criarImagem()
 {
     strcat(nome_arquivo_resultado, nome_arquivo_entrada);
-    printf("NOME DO ARQUIVO RESULTADO: %s", nome_arquivo_resultado);
+    printf("NOME DO ARQUIVO RESULTADO: %s\n", nome_arquivo_resultado);
 
     // ESCRITA DOS DADOS DA NOVA IMAGEM
     arquivo_final = fopen(nome_arquivo_resultado, "w");
     fprintf(arquivo_final, "%s\n",    imagem_resultado.chave);
     fprintf(arquivo_final, "%d %d\n", imagem_resultado.largura, imagem_resultado.altura);
     fprintf(arquivo_final, "%d\n",    imagem_resultado.valor_max);
-    for(i = 0; i < LINHAS; i++)
+    for(i = 1; i < LINHAS-1; i++)
     {
-        for(j = 0; j < COLUNAS; j++)
+        for(j = 1; j < COLUNAS-1; j++)
         {
-            if(imagem_resultado.dados[i][j] < 0)
-                imagem_resultado.dados[i][j] = imagem_resultado.dados[i][j] * (-1);
             fprintf(arquivo_final, "%3d ", imagem_resultado.dados[i][j]);
             if(contador >= 16)
             {
@@ -111,13 +116,10 @@ void operadorPrewitt()
     int resultado_final     = 0;
     int linha   = 0;
     int coluna  = 0;
-    int i, j;
-    int matriz[3][3];
 
-
-    for(linha = 0; linha < LINHAS; linha++)
+    for(linha = 1; linha < LINHAS-1; linha++)
     {
-        for(coluna = 0; coluna < COLUNAS; coluna++)
+        for(coluna = 1; coluna < COLUNAS-1; coluna++)
         {
             /*
              * Matriz 3x3 que pegará os pixels ao redor do qual estamos operando
@@ -129,46 +131,25 @@ void operadorPrewitt()
              * | 7 | 8 | 9 |
              * |---|---|---|
              */
-            matriz[0][0] = imagem_entrada.dados[linha - 1][coluna - 1]; //posição 1
-            matriz[0][1] = imagem_entrada.dados[linha - 1][coluna];     //posição 2
-            matriz[0][2] = imagem_entrada.dados[linha - 1][coluna + 1]; //posição 3
-            matriz[1][0] = imagem_entrada.dados[linha][coluna - 1];     //posição 4
-            matriz[1][1] = imagem_entrada.dados[linha][coluna];         //posição 5 Posição do pixel que irá receber o resultado da operação
-            matriz[1][2] = imagem_entrada.dados[linha][coluna + 1];     //posição 6
-            matriz[2][0] = imagem_entrada.dados[linha + 1][coluna - 1]; //posição 7
-            matriz[2][1] = imagem_entrada.dados[linha + 1][coluna];     //posição 8
-            matriz[2][2] = imagem_entrada.dados[linha + 1][coluna + 1]; //posição 9
-            for(i = 0; i < 3; i++)
-            {
-                for(j = 0; j < 3; j++)
-                {
-                    if(matriz[i][j] < 0) matriz[i][j] = 0;
-                    if(matriz[i][j] > 255) matriz[i][j] = 0;
-                }
-            }
+            resultado_mascara_x   = ((mascara_x[0][0]) * imagem_entrada.dados[linha - 1][coluna - 1]) +
+                                    ((mascara_x[0][1]) * imagem_entrada.dados[linha - 1][coluna])     +
+                                    ((mascara_x[0][2]) * imagem_entrada.dados[linha - 1][coluna + 1]) +
+                                    ((mascara_x[1][0]) * imagem_entrada.dados[linha][coluna - 1])     +
+                                    ((mascara_x[1][1]) * imagem_entrada.dados[linha][coluna])         +
+                                    ((mascara_x[1][2]) * imagem_entrada.dados[linha][coluna + 1])     +
+                                    ((mascara_x[2][0]) * imagem_entrada.dados[linha + 1][coluna - 1]) +
+                                    ((mascara_x[2][1]) * imagem_entrada.dados[linha + 1][coluna])     +
+                                    ((mascara_x[2][2]) * imagem_entrada.dados[linha + 1][coluna + 1]);
 
-            resultado_mascara_x = 0;
-            resultado_mascara_y = 0;
-
-            resultado_mascara_x   = ((mascara_x[0][0]) * matriz[0][0]) +
-                                    ((mascara_x[0][1]) * matriz[0][1]) +
-                                    ((mascara_x[0][2]) * matriz[0][2]) +
-                                    ((mascara_x[1][0]) * matriz[1][0]) +
-                                    ((mascara_x[1][1]) * matriz[1][1]) +
-                                    ((mascara_x[1][2]) * matriz[1][2]) +
-                                    ((mascara_x[2][0]) * matriz[2][0]) +
-                                    ((mascara_x[2][1]) * matriz[2][1]) +
-                                    ((mascara_x[2][2]) * matriz[2][2]);
-
-            resultado_mascara_y =   ((mascara_y[0][0]) * matriz[0][0]) +
-                                    ((mascara_y[0][1]) * matriz[0][1]) +
-                                    ((mascara_y[0][2]) * matriz[0][2]) +
-                                    ((mascara_y[1][0]) * matriz[1][0]) +
-                                    ((mascara_y[1][1]) * matriz[1][1]) +
-                                    ((mascara_y[1][2]) * matriz[1][2]) +
-                                    ((mascara_y[2][0]) * matriz[2][0]) +
-                                    ((mascara_y[2][1]) * matriz[2][1]) +
-                                    ((mascara_y[2][2]) * matriz[2][2]);
+            resultado_mascara_y   = ((mascara_y[0][0]) * imagem_entrada.dados[linha - 1][coluna - 1]) +
+                                    ((mascara_y[0][1]) * imagem_entrada.dados[linha - 1][coluna])     +
+                                    ((mascara_y[0][2]) * imagem_entrada.dados[linha - 1][coluna + 1]) +
+                                    ((mascara_y[1][0]) * imagem_entrada.dados[linha][coluna - 1])     +
+                                    ((mascara_y[1][1]) * imagem_entrada.dados[linha][coluna])         +
+                                    ((mascara_y[1][2]) * imagem_entrada.dados[linha][coluna + 1])     +
+                                    ((mascara_y[2][0]) * imagem_entrada.dados[linha + 1][coluna - 1]) +
+                                    ((mascara_y[2][1]) * imagem_entrada.dados[linha + 1][coluna])     +
+                                    ((mascara_y[2][2]) * imagem_entrada.dados[linha + 1][coluna + 1]);
 
             if(resultado_mascara_x < 0)
                 resultado_mascara_x = resultado_mascara_x * (-1);
@@ -176,29 +157,29 @@ void operadorPrewitt()
                 resultado_mascara_y = resultado_mascara_y * (-1);
             resultado_final  = resultado_mascara_x + resultado_mascara_y;
 
-            imagem_resultado.dados[linha][coluna] = resultado_final;
+            if(resultado_final > 255) imagem_resultado.dados[linha][coluna] = 255;
+            else imagem_resultado.dados[linha][coluna] = resultado_final;
         }
     }
 }
 
 int main()
 {
+    //==============================
     lerImagem();
-
     //==============================
-//    clock_t tempo_inicio;
-//    clock_t tempo_fim;
-//    double tempo_gasto;
-//    tempo_inicio = clock();
-//
+    clock_t tempo_inicio;
+    clock_t tempo_fim;
+    double tempo_gasto;
+    tempo_inicio = clock();
+    //===============================
     operadorPrewitt();
-//
-//    tempo_fim    = clock();
-//    tempo_gasto  = ((tempo_fim - tempo_inicio) / (CLOCKS_PER_SEC/1000.0));
-//    printf("\nTempo gasto: %.8f \n\n", tempo_gasto);
-    //==============================
-
+    //===============================
+    tempo_fim    = clock();
+    tempo_gasto  = ((tempo_fim - tempo_inicio) / (CLOCKS_PER_SEC/1000.0));
+    printf("\nTempo gasto: %.8f \n\n", tempo_gasto);
+    // ==============================
     criarImagem();
-
+    //==============================
     return 0;
 }
