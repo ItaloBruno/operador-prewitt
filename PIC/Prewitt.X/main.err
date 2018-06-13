@@ -1,4 +1,2 @@
-Warning[2066] C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c 228 : type qualifier mismatch in assignment
-Warning[2066] C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c 230 : type qualifier mismatch in assignment
-Warning[2058] C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c 242 : call of function without prototype
-Warning[2058] C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c 244 : call of function without prototype
+Warning[2066] C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c 207 : type qualifier mismatch in assignment
+Warning[2066] C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c 209 : type qualifier mismatch in assignment
