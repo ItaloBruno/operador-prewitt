@@ -31,7 +31,7 @@
 #pragma config LVP      = OFF   /// DISABLE LOW VOLTAGE PROGRAM (ICSP DISABLE)
 
 // vetor de imagem 80 x 50
-rom int dados[LINHAS][COLUNAS] = 
+rom unsigned char dados[LINHAS][COLUNAS] = 
 {
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -148,7 +148,8 @@ void operadorPrewitt(void)
     int resultado_mascara_x = 0;
     int resultado_mascara_y = 0;
     int resultado_final     = 0;
-    int linha, coluna;
+    unsigned char linha;
+    unsigned char coluna;
     // Matriz 3x3 que pegar� os pixels ao redor do qual estamos operando
 //    int matriz[3][3];
     

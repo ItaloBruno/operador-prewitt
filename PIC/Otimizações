@@ -1,0 +1,8 @@
+Solucionar o problema de acessar endereços de memórias fora da imagem:
+    - Proposta: Rodear a imagem com valor 0, para que o algoritmo não recolha lixo em suas operações. (FEITO)
+
+    - Tirar a parte do código que verifica se o valores da janela 3x3 estão entre 0 e 255. (FEITO)
+
+    - Retirada de variáveis desnecessárias. (FEITO)
+ 
+    - Troca de tipos de variáveis, com o objetivo de diminuir a memória de programa. (EM ANDAMENTO)
