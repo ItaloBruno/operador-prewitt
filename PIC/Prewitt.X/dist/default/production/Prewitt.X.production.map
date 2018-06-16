@@ -1,5 +1,5 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Tue Jun 12 15:14:58 2018
+Linker Map File - Created Sat Jun 16 14:17:17 2018
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
@@ -105,56 +105,56 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
        ___return_lbl00000   0x000004    program     static                          
        ___return_lbl00001   0x002d56    program     static                          
        ___return_lbl00002   0x002bb0    program     static                          
-               __config_0   0x300001    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_1   0x300002    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_2   0x300003    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_3   0x300005    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_4   0x300006    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+               __config_0   0x300001    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_1   0x300002    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_2   0x300003    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_3   0x300005    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_4   0x300006    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                    __init   0x002d78    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-                   __pa_0   0x002576    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_1   0x0025fc    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_10   0x002990    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_11   0x0029a0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_12   0x0029c0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_13   0x0029de    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_14   0x0029ea    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_15   0x0029fa    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_16   0x002a04    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_17   0x002a16    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_18   0x002a2c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_19   0x002a3c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_2   0x00267c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_20   0x002a4a    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_21   0x002a58    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_22   0x002a66    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_3   0x0026fc    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_4   0x002766    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_5   0x0027e0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_6   0x002854    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_7   0x0028b2    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_8   0x002906    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_9   0x002964    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __string_0   0x002d74    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+                   __pa_0   0x002576    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_1   0x0025fc    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_10   0x002990    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_11   0x0029a0    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_12   0x0029c0    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_13   0x0029de    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_14   0x0029ea    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_15   0x0029fa    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_16   0x002a04    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_17   0x002a16    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_18   0x002a2c    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_19   0x002a3c    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_2   0x00267c    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_20   0x002a4a    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_21   0x002a58    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_22   0x002a66    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_3   0x0026fc    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_4   0x002766    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_5   0x0027e0    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_6   0x002854    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_7   0x0028b2    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_8   0x002906    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_9   0x002964    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __string_0   0x002d74    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
             __zero_memory   0x002d1c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 _do_cinit   0x002b14    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  _startup   0x002d3c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                 baudUSART   0x002cfa    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\ubaud.c
                 compare_l   0x002d32    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-          configurarUSART   0x002158    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+          configurarUSART   0x002158    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                 copy_loop   0x002b86    program     static                          
             copy_one_byte   0x002b8c    program     static                          
-                    dados   0x000008    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+                    dados   0x000008    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                      done   0x002bb0    program     static                          
              done_copying   0x002b9a    program     static                          
                   endloop   0x002cf4    program     static                          
-             enviarSerial   0x00217c    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+             enviarSerial   0x00217c    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                      loop   0x002d4c    program     static                          
                      loop   0x002cd8    program     static                          
                    loop_h   0x002d2a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    loop_l   0x002d34    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     main   0x002560    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-          operadorPrewitt   0x002274    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+                     main   0x002560    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+          operadorPrewitt   0x002274    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                putrsUSART   0x002c3c    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uputrs.c
                      test   0x002b2e    program     static                          
                zero_block   0x002d2a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -437,7 +437,7 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
                  __TEMPB2   0x000053       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                  __TEMPB3   0x000052       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                   __tmp_0   0x000000       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                  __tmp_0   0x000000       data     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+                  __tmp_0   0x000000       data     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                 curr_byte   0x000063       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x000065       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x000067       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
@@ -450,34 +450,34 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-                    dados   0x000008    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-          configurarUSART   0x002158    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-             enviarSerial   0x00217c    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-          operadorPrewitt   0x002274    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                     main   0x002560    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_0   0x002576    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_1   0x0025fc    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_2   0x00267c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_3   0x0026fc    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_4   0x002766    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_5   0x0027e0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_6   0x002854    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_7   0x0028b2    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_8   0x002906    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_9   0x002964    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_10   0x002990    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_11   0x0029a0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_12   0x0029c0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_13   0x0029de    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_14   0x0029ea    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_15   0x0029fa    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_16   0x002a04    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_17   0x002a16    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_18   0x002a2c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_19   0x002a3c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_20   0x002a4a    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_21   0x002a58    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_22   0x002a66    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+                    dados   0x000008    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+          configurarUSART   0x002158    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+             enviarSerial   0x00217c    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+          operadorPrewitt   0x002274    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                     main   0x002560    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_0   0x002576    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_1   0x0025fc    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_2   0x00267c    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_3   0x0026fc    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_4   0x002766    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_5   0x0027e0    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_6   0x002854    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_7   0x0028b2    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_8   0x002906    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_9   0x002964    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_10   0x002990    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_11   0x0029a0    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_12   0x0029c0    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_13   0x0029de    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_14   0x0029ea    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_15   0x0029fa    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_16   0x002a04    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_17   0x002a16    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_18   0x002a2c    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_19   0x002a3c    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_20   0x002a4a    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_21   0x002a58    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_22   0x002a66    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                  FXD1616S   0x002a6e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
                   DA1616S   0x002a80    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
                    D1616S   0x002a90    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
@@ -515,14 +515,14 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
                    D100_1   0x002d66    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
        _D100TCYXCODE_0012   0x002d6a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
        _D100TCYXCODE_0018   0x002d70    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-               __string_0   0x002d74    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+               __string_0   0x002d74    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                    __init   0x002d78    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-               __config_0   0x300001    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_1   0x300002    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_2   0x300003    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_3   0x300005    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_4   0x300006    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __tmp_0   0x000000       data     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+               __config_0   0x300001    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_1   0x300002    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_2   0x300003    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_3   0x300005    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_4   0x300006    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __tmp_0   0x000000       data     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                   __tmp_0   0x000000       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
                      SIGN   0x000042       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x000043       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
