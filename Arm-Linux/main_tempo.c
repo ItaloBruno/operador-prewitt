@@ -3,8 +3,8 @@
 #include <string.h>
 #include <time.h>
 #define NOME_MAX 128
-#define COLUNAS  602 //LARGURA DA IMAGEM + 2
-#define LINHAS   602 //ALTURA  DA IMAGEM + 2
+#define COLUNAS  82 //LARGURA DA IMAGEM + 2
+#define LINHAS   52 //ALTURA  DA IMAGEM + 2
 
 //STRUCT COM TODAS AS INFORMAÇÕES NECESSÁRIAS PARA A MANIPULAÇÃO DA IMAGEM
 struct imagem_entrada
@@ -177,7 +177,7 @@ int main()
     //===============================
     tempo_fim    = clock();
     tempo_gasto  = ((tempo_fim - tempo_inicio) / (CLOCKS_PER_SEC/1000.0));
-    printf("\nTempo gasto: %.8f \n\n", tempo_gasto);
+    printf("\nTempo de computação: %.4f ms\n\n", tempo_gasto);
     // ==============================
     criarImagem();
     //==============================
