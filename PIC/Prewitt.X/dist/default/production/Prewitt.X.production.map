@@ -1,52 +1,55 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Tue Jun 12 15:14:58 2018
+Linker Map File - Created Sun Jun 17 10:48:46 2018
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
-          .romdata_main.o    romdata   0x000008    program   0x002150
-             .code_main.o       code   0x002158    program   0x000916
-                     PROG       code   0x002a6e    program   0x0000a6
-               _cinit_scn       code   0x002b14    program   0x00009e
-            .code_uopen.o       code   0x002bb2    program   0x00008a
-           .code_uputrs.o       code   0x002c3c    program   0x000064
-           .code_uwrite.o       code   0x002ca0    program   0x00002e
-         .code_fxd1616u.o       code   0x002cce    program   0x00002c
-            .code_ubaud.o       code   0x002cfa    program   0x000022
-                    .code       code   0x002d1c    program   0x000020
-             _startup_scn       code   0x002d3c    program   0x00001c
-             D100TCYXCODE       code   0x002d58    program   0x00001c
-             .stringtable    romdata   0x002d74    program   0x000003
-         .idata_c018i.o_i    romdata   0x002d77    program   0x000000
-         .romdata_c018i.o    romdata   0x002d77    program   0x000000
-        .romdata_uputrs.o    romdata   0x002d77    program   0x000000
-        .idata_uputrs.o_i    romdata   0x002d77    program   0x000000
-         .romdata_ubaud.o    romdata   0x002d77    program   0x000000
-         .idata_ubaud.o_i    romdata   0x002d77    program   0x000000
-        .romdata___init.o    romdata   0x002d77    program   0x000000
-        .idata___init.o_i    romdata   0x002d77    program   0x000000
-         .romdata_udefs.o    romdata   0x002d77    program   0x000000
-         .idata_udefs.o_i    romdata   0x002d77    program   0x000000
-        .romdata_uwrite.o    romdata   0x002d77    program   0x000000
-        .idata_uwrite.o_i    romdata   0x002d77    program   0x000000
-         .romdata_uopen.o    romdata   0x002d77    program   0x000000
-         .idata_uopen.o_i    romdata   0x002d77    program   0x000000
-          .idata_main.o_i    romdata   0x002d77    program   0x000000
-      .romdata_fxd1616u.o    romdata   0x002d77    program   0x000000
-      .idata_fxd1616u.o_i    romdata   0x002d77    program   0x000000
-            .code_c018i.o       code   0x002d78    program   0x000000
-            .code_udefs.o       code   0x002d78    program   0x000000
-           .code___init.o       code   0x002d78    program   0x000002
+          .romdata_main.o    romdata   0x000008    program   0x0010a8
+             .code_main.o       code   0x0010b0    program   0x000490
+                     PROG       code   0x001540    program   0x0000da
+               _cinit_scn       code   0x00161a    program   0x00009e
+            .code_uopen.o       code   0x0016b8    program   0x00008a
+           .code_uputrs.o       code   0x001742    program   0x000064
+           .code_uwrite.o       code   0x0017a6    program   0x00002e
+         .code_fxd1616u.o       code   0x0017d4    program   0x00002c
+            .code_ubaud.o       code   0x001800    program   0x000022
+                    .code       code   0x001822    program   0x000020
+             _startup_scn       code   0x001842    program   0x00001c
+             D100TCYXCODE       code   0x00185e    program   0x00001c
+         .code_fxd0808u.o       code   0x00187a    program   0x00001c
+             .stringtable    romdata   0x001896    program   0x000003
+        .idata___init.o_i    romdata   0x001899    program   0x000000
+        .romdata___init.o    romdata   0x001899    program   0x000000
+         .idata_ubaud.o_i    romdata   0x001899    program   0x000000
+        .romdata_uputrs.o    romdata   0x001899    program   0x000000
+         .romdata_udefs.o    romdata   0x001899    program   0x000000
+         .idata_udefs.o_i    romdata   0x001899    program   0x000000
+         .romdata_ubaud.o    romdata   0x001899    program   0x000000
+        .romdata_uwrite.o    romdata   0x001899    program   0x000000
+        .idata_uwrite.o_i    romdata   0x001899    program   0x000000
+        .idata_uputrs.o_i    romdata   0x001899    program   0x000000
+         .idata_c018i.o_i    romdata   0x001899    program   0x000000
+         .romdata_c018i.o    romdata   0x001899    program   0x000000
+          .idata_main.o_i    romdata   0x001899    program   0x000000
+      .idata_fxd0808u.o_i    romdata   0x001899    program   0x000000
+      .romdata_fxd0808u.o    romdata   0x001899    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x001899    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x001899    program   0x000000
+         .idata_uopen.o_i    romdata   0x001899    program   0x000000
+         .romdata_uopen.o    romdata   0x001899    program   0x000000
+            .code_udefs.o       code   0x00189a    program   0x000000
+           .code___init.o       code   0x00189a    program   0x000002
+            .code_c018i.o       code   0x00189a    program   0x000000
     .config_300001_main.o    romdata   0x300001    program   0x000001
     .config_300002_main.o    romdata   0x300002    program   0x000001
     .config_300003_main.o    romdata   0x300003    program   0x000001
     .config_300005_main.o    romdata   0x300005    program   0x000001
     .config_300006_main.o    romdata   0x300006    program   0x000001
-                 .tmpdata      udata   0x000000       data   0x000042
-                MATH_DATA      udata   0x000042       data   0x000014
-                DELAYDAT1      udata   0x000056       data   0x000001
+                 .tmpdata      udata   0x000000       data   0x000024
+                MATH_DATA      udata   0x000024       data   0x000014
+                DELAYDAT1      udata   0x000038       data   0x000001
            .udata_c018i.o      udata   0x000060       data   0x00000a
            .udata_udefs.o      udata   0x00006a       data   0x000001
           .idata_uputrs.o      idata   0x00006b       data   0x000000
@@ -62,6 +65,8 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
            .udata_uopen.o      udata   0x00006b       data   0x000000
         .idata_fxd1616u.o      idata   0x00006b       data   0x000000
         .udata_fxd1616u.o      udata   0x00006b       data   0x000000
+        .idata_fxd0808u.o      idata   0x00006b       data   0x000000
+        .udata_fxd0808u.o      udata   0x00006b       data   0x000000
             .idata_main.o      idata   0x00006b       data   0x000000
             .udata_main.o      udata   0x00006b       data   0x000000
            .idata_c018i.o      idata   0x00006b       data   0x000000
@@ -73,91 +78,100 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x002d76      
-                            0x002d78    0x002d79      
+                            0x000000    0x001898      
+                            0x00189a    0x00189b      
                             0x300001    0x300003      
                             0x300005    0x300006      
-            11646 out of 33048 program addresses used, program memory utilization is 35%
+            6304 out of 33048 program addresses used, program memory utilization is 19%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
-                   D100_1   0x002d66    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                    D100x   0x002d64    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                   D1616S   0x002a90    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x002a9e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x002a9a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x002ab0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x002a80    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-             Delay100TCYx   0x002d58    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                 FXD1616S   0x002a6e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXD1616U   0x002cce    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                 FXM1616S   0x002aba    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                OpenUSART   0x002bb2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-               TSIGN1616A   0x002b06    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-               WriteUSART   0x002ca0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
-       _D100TCYXCODE_0008   0x002d60    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0012   0x002d6a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0018   0x002d70    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       ___return_lbl00000   0x002cf8    program     static                          
+                   D0808S   0x001556    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                D0808SNEG   0x001564    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                 D0808SOK   0x001560    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                  D0808SX   0x00156a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                   D100_1   0x00186c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                    D100x   0x00186a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                   D1616S   0x001596    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x0015a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x0015a0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x0015b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA0808S   0x00154c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                  DA1616S   0x001586    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+             Delay100TCYx   0x00185e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                 FXD0808S   0x001540    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                 FXD0808U   0x00187a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
+                 FXD1616S   0x001574    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x0017d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXM1616S   0x0015c0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                OpenUSART   0x0016b8    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+               TSIGN1616A   0x00160c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               WriteUSART   0x0017a6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
+       _D100TCYXCODE_0008   0x001866    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0012   0x001870    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0018   0x001876    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x002d56    program     static                          
-       ___return_lbl00002   0x002bb0    program     static                          
-               __config_0   0x300001    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_1   0x300002    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_2   0x300003    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_3   0x300005    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_4   0x300006    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __init   0x002d78    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-                   __pa_0   0x002576    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_1   0x0025fc    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_10   0x002990    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_11   0x0029a0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_12   0x0029c0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_13   0x0029de    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_14   0x0029ea    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_15   0x0029fa    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_16   0x002a04    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_17   0x002a16    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_18   0x002a2c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_19   0x002a3c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_2   0x00267c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_20   0x002a4a    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_21   0x002a58    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_22   0x002a66    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_3   0x0026fc    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_4   0x002766    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_5   0x0027e0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_6   0x002854    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_7   0x0028b2    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_8   0x002906    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_9   0x002964    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __string_0   0x002d74    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-            __zero_memory   0x002d1c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                _do_cinit   0x002b14    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00000   0x0017fe    program     static                          
+       ___return_lbl00000   0x001894    program     static                          
+       ___return_lbl00001   0x00185c    program     static                          
+       ___return_lbl00002   0x0016b6    program     static                          
+               __config_0   0x300001    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_1   0x300002    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_2   0x300003    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_3   0x300005    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_4   0x300006    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __init   0x00189a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                   __pa_0   0x001354    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_1   0x00136a    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_10   0x0014c4    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_11   0x0014cc    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_12   0x0014de    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_13   0x0014ea    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_14   0x0014f4    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_15   0x0014fc    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_16   0x001504    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_17   0x00150e    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_18   0x001516    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_19   0x00151e    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_2   0x0013b2    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_20   0x00152c    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_21   0x001536    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_3   0x0013f8    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_4   0x001434    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_5   0x001442    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_6   0x001456    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_7   0x001476    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_8   0x001494    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_9   0x0014ae    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __string_0   0x001896    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+            __zero_memory   0x001822    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                _do_cinit   0x00161a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x002d3c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                baudUSART   0x002cfa    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\ubaud.c
-                compare_l   0x002d32    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-          configurarUSART   0x002158    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                copy_loop   0x002b86    program     static                          
-            copy_one_byte   0x002b8c    program     static                          
-                    dados   0x000008    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                     done   0x002bb0    program     static                          
-             done_copying   0x002b9a    program     static                          
-                  endloop   0x002cf4    program     static                          
-             enviarSerial   0x00217c    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                     loop   0x002d4c    program     static                          
-                     loop   0x002cd8    program     static                          
-                   loop_h   0x002d2a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x002d34    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     main   0x002560    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-          operadorPrewitt   0x002274    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               putrsUSART   0x002c3c    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uputrs.c
-                     test   0x002b2e    program     static                          
-               zero_block   0x002d2a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x001842    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                baudUSART   0x001800    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\ubaud.c
+                compare_l   0x001838    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+          configurarUSART   0x0010b0    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                copy_loop   0x00168c    program     static                          
+            copy_one_byte   0x001692    program     static                          
+                    dados   0x000008    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                     done   0x0016b6    program     static                          
+             done_copying   0x0016a0    program     static                          
+                  endloop   0x001890    program     static                          
+                  endloop   0x0017fa    program     static                          
+             enviarSerial   0x0010d4    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                     loop   0x001852    program     static                          
+                     loop   0x001882    program     static                          
+                     loop   0x0017de    program     static                          
+                   loop_h   0x001830    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x00183a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                     main   0x00134a    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+          operadorPrewitt   0x001144    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               putrsUSART   0x001742    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uputrs.c
+                     test   0x001634    program     static                          
+               zero_block   0x001830    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -200,7 +214,7 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
                  DDRDbits   0x000f95       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      DDRE   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  DDREbits   0x000f96       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-            DelayCounter1   0x000056       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
+            DelayCounter1   0x000038       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
                   ECCP1AS   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
               ECCP1ASbits   0x000fb6       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                  ECCP1CON   0x000fbd       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -295,7 +309,7 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
                     RCREG   0x000fae       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                     RCSTA   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                 RCSTAbits   0x000fab       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                     SIGN   0x000042       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                     SIGN   0x000024       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                     SPBRG   0x000faf       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    SPBRGH   0x000fb0       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                    SPPCFG   0x000f63       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
@@ -411,33 +425,33 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
                    WDTCON   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                WDTCONbits   0x000fd1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
                      WREG   0x000fe8       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 __AARGB0   0x00004b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB1   0x00004a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB2   0x000049       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB3   0x000048       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB4   0x000047       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB5   0x000046       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000045       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB7   0x000044       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                   __AEXP   0x00004c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __BARGB0   0x000050       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB1   0x00004f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB2   0x00004e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB3   0x00004d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                   __BEXP   0x000051       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                __FPFLAGS   0x000043       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-            __FPFLAGSbits   0x000043       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                  __REMB0   0x000047       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB1   0x000046       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB2   0x000045       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB3   0x000044       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                   __TEMP   0x000055       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                 __TEMPB0   0x000055       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                 __TEMPB1   0x000054       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                 __TEMPB2   0x000053       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                 __TEMPB3   0x000052       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __AARGB0   0x00002d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x00002c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x00002b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x00002a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000029       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000028       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000027       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB7   0x000026       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x00002e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB0   0x000032       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x000031       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x000030       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB3   0x00002f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x000033       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                __FPFLAGS   0x000025       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000025       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                  __REMB0   0x000029       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000028       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000027       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000026       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __TEMP   0x000037       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000037       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000036       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000035       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB3   0x000034       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
                   __tmp_0   0x000000       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                  __tmp_0   0x000000       data     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+                  __tmp_0   0x000000       data     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                 curr_byte   0x000063       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x000065       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                  data_ptr   0x000067       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
@@ -450,107 +464,116 @@ Linker Map File - Created Tue Jun 12 15:14:58 2018
                 ---------  ---------  ---------  --------- ---------                
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
        ___return_lbl00000   0x000004    program     static                          
-                    dados   0x000008    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-          configurarUSART   0x002158    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-             enviarSerial   0x00217c    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-          operadorPrewitt   0x002274    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                     main   0x002560    program     extern C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_0   0x002576    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_1   0x0025fc    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_2   0x00267c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_3   0x0026fc    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_4   0x002766    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_5   0x0027e0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_6   0x002854    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_7   0x0028b2    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_8   0x002906    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __pa_9   0x002964    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_10   0x002990    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_11   0x0029a0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_12   0x0029c0    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_13   0x0029de    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_14   0x0029ea    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_15   0x0029fa    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_16   0x002a04    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_17   0x002a16    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_18   0x002a2c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_19   0x002a3c    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_20   0x002a4a    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_21   0x002a58    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __pa_22   0x002a66    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                 FXD1616S   0x002a6e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  DA1616S   0x002a80    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                   D1616S   0x002a90    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 D1616SOK   0x002a9a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                D1616SNEG   0x002a9e    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                  D1616SX   0x002ab0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
-                 FXM1616S   0x002aba    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-               TSIGN1616A   0x002b06    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-                _do_cinit   0x002b14    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x002b2e    program     static                          
-                copy_loop   0x002b86    program     static                          
-            copy_one_byte   0x002b8c    program     static                          
-             done_copying   0x002b9a    program     static                          
-                     done   0x002bb0    program     static                          
-       ___return_lbl00002   0x002bb0    program     static                          
-                OpenUSART   0x002bb2    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-               putrsUSART   0x002c3c    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uputrs.c
-               WriteUSART   0x002ca0    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
-                 FXD1616U   0x002cce    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
-                     loop   0x002cd8    program     static                          
-                  endloop   0x002cf4    program     static                          
-       ___return_lbl00000   0x002cf8    program     static                          
-                baudUSART   0x002cfa    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\ubaud.c
-            __zero_memory   0x002d1c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_h   0x002d2a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-               zero_block   0x002d2a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                compare_l   0x002d32    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                   loop_l   0x002d34    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
-                 _startup   0x002d3c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x002d4c    program     static                          
-       ___return_lbl00001   0x002d56    program     static                          
-             Delay100TCYx   0x002d58    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0008   0x002d60    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                    D100x   0x002d64    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-                   D100_1   0x002d66    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0012   0x002d6a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-       _D100TCYXCODE_0018   0x002d70    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
-               __string_0   0x002d74    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                   __init   0x002d78    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-               __config_0   0x300001    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_1   0x300002    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_2   0x300003    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_3   0x300005    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-               __config_4   0x300006    program     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
-                  __tmp_0   0x000000       data     static C:\Users\Lapada\Desktop\operador-prewitt-nao-otimizado\operador-prewitt-master\PIC\Prewitt.X\main.c
+                    dados   0x000008    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+          configurarUSART   0x0010b0    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+             enviarSerial   0x0010d4    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+          operadorPrewitt   0x001144    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                     main   0x00134a    program     extern C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_0   0x001354    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_1   0x00136a    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_2   0x0013b2    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_3   0x0013f8    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_4   0x001434    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_5   0x001442    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_6   0x001456    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_7   0x001476    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_8   0x001494    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __pa_9   0x0014ae    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_10   0x0014c4    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_11   0x0014cc    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_12   0x0014de    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_13   0x0014ea    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_14   0x0014f4    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_15   0x0014fc    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_16   0x001504    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_17   0x00150e    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_18   0x001516    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_19   0x00151e    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_20   0x00152c    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __pa_21   0x001536    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                 FXD0808S   0x001540    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                  DA0808S   0x00154c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                   D0808S   0x001556    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                 D0808SOK   0x001560    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                D0808SNEG   0x001564    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                  D0808SX   0x00156a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808s.asm
+                 FXD1616S   0x001574    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x001586    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x001596    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x0015a0    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x0015a4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x0015b6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXM1616S   0x0015c0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x00160c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                _do_cinit   0x00161a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x001634    program     static                          
+                copy_loop   0x00168c    program     static                          
+            copy_one_byte   0x001692    program     static                          
+             done_copying   0x0016a0    program     static                          
+                     done   0x0016b6    program     static                          
+       ___return_lbl00002   0x0016b6    program     static                          
+                OpenUSART   0x0016b8    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
+               putrsUSART   0x001742    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uputrs.c
+               WriteUSART   0x0017a6    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uwrite.c
+                 FXD1616U   0x0017d4    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x0017de    program     static                          
+                  endloop   0x0017fa    program     static                          
+       ___return_lbl00000   0x0017fe    program     static                          
+                baudUSART   0x001800    program     extern E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\ubaud.c
+            __zero_memory   0x001822    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+               zero_block   0x001830    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_h   0x001830    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                compare_l   0x001838    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                   loop_l   0x00183a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4550.asm
+                 _startup   0x001842    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x001852    program     static                          
+       ___return_lbl00001   0x00185c    program     static                          
+             Delay100TCYx   0x00185e    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0008   0x001866    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                    D100x   0x00186a    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                   D100_1   0x00186c    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0012   0x001870    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+       _D100TCYXCODE_0018   0x001876    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\d100tcyx.asm
+                 FXD0808U   0x00187a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\fxd0808u.c
+                     loop   0x001882    program     static                          
+                  endloop   0x001890    program     static                          
+       ___return_lbl00000   0x001894    program     static                          
+               __string_0   0x001896    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                   __init   0x00189a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+               __config_0   0x300001    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_1   0x300002    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_2   0x300003    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_3   0x300005    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+               __config_4   0x300006    program     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
+                  __tmp_0   0x000000       data     static C:\Users\Italo Bruno\Documents\Repositórios Git\operador-prewitt\PIC\Prewitt.X\main.c
                   __tmp_0   0x000000       data     static E:\3.46\pic18-lt\cxx-framework\src\pmc_common\USART\uopen.c
-                     SIGN   0x000042       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                __FPFLAGS   0x000043       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-            __FPFLAGSbits   0x000043       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
-                 __AARGB7   0x000044       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB3   0x000044       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB6   0x000045       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB2   0x000045       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB5   0x000046       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB1   0x000046       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB4   0x000047       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                  __REMB0   0x000047       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB3   0x000048       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB2   0x000049       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB1   0x00004a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __AARGB0   0x00004b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                   __AEXP   0x00004c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
-                 __BARGB3   0x00004d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB2   0x00004e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB1   0x00004f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __BARGB0   0x000050       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                   __BEXP   0x000051       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
-                 __TEMPB3   0x000052       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                 __TEMPB2   0x000053       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                 __TEMPB1   0x000054       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                   __TEMP   0x000055       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-                 __TEMPB0   0x000055       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
-            DelayCounter1   0x000056       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
+                     SIGN   0x000024       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x000025       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000025       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
+                 __AARGB7   0x000026       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB3   0x000026       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB6   0x000027       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB2   0x000027       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB5   0x000028       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB1   0x000028       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB4   0x000029       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                  __REMB0   0x000029       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB3   0x00002a       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB2   0x00002b       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB1   0x00002c       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __AARGB0   0x00002d       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                   __AEXP   0x00002e       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\aarg.asm
+                 __BARGB3   0x00002f       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB2   0x000030       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB1   0x000031       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __BARGB0   0x000032       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                   __BEXP   0x000033       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\barg.asm
+                 __TEMPB3   0x000034       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB2   0x000035       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB1   0x000036       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                   __TEMP   0x000037       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+                 __TEMPB0   0x000037       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\math\temparg.asm
+            DelayCounter1   0x000038       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\delays\delayd1.asm
                      prom   0x000060       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                 curr_byte   0x000063       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                curr_entry   0x000065       data     static E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
