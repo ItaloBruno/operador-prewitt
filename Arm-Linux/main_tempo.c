@@ -28,6 +28,31 @@ int i;
 int j;
 int contador;
 
+void getMemoryUsed()
+{
+	int pagesize = getpagesize();
+
+	FILE *pf;
+	fopen("/proc/self/statm", "r");
+	if ((pf = fopen("/proc/self/statm", "r")) == NULL) {
+		printf("Failed to open the proc file\n");
+		exit(1);
+	}
+
+	unsigned int size = 0; 			/* Tamanho total do programa */
+	unsigned int resident = 0;		/* Conjunto Residente */
+	unsigned int share= 0;			/* Paginas Compartilhadas (shared pages) */
+	unsigned int text = 0;			/* Codigo do Texto (text code) */
+	unsigned int lib = 0;			/* Biblioteca (library) */
+	unsigned int data = 0;			/* Pilha (data/stack) */
+	unsigned int dt = 0;			/* dirty pages (unused in Linux 2.6) */
+
+	
+	char ret[50];
+	fscanf(pf, "%u %u %u %u %u %u", &size, &resident, &share, &text, &lib, &data);	
+	fclose(pf);
+	printf("\n[size]\t[RSS]\t[share]\t[text]\t[lib]\t[data]\t[dp]\n%u\t%u\t%u\t%u\t%u\t%u\t%u\n", size, resident, share, text, lib, data, pagesize);		
+}
 
 // FAZ A LEITURA DO ARQUIVO DETERMINADO PELO USUÁRIO E SALVA SEUS DADOS NA VARIÁVEL IMAGEM
 void lerImagem()
@@ -165,6 +190,7 @@ void operadorPrewitt()
 
 int main()
 {
+    getMemoryUsed();
     //==============================
     lerImagem();
     //==============================
@@ -181,5 +207,6 @@ int main()
     // ==============================
     criarImagem();
     //==============================
+    getMemoryUsed();
     return 0;
 }
