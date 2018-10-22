@@ -1,4 +1,4 @@
-/* 
+﻿/* 
  * File:   main.c
  * Author: Italo Bruno e Davi Augusto
  *
@@ -11,6 +11,9 @@
 #include <p18f4550.h>
 #include <usart.h>
 #include <delays.h>
+
+//Ei hokage queria agredecer pela blusa bicho valeu!!!!!!!
+
 
 // Definição das dimensões da imagem usada no programa
 #define COLUNAS 82 //LARGURA DA IMAGEM + 2
